@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 class UserInformation{
     static let shared: UserInformation = UserInformation()
@@ -8,7 +9,7 @@ class UserInformation{
     var information: String?
     var phone: String?
     var birth: String?
-//    var imageProfile: UIImage?
+    var imageProfile: UIImage?
     
     
 }

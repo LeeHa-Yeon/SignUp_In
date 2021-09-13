@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController {
 
 
     @IBOutlet weak var setID: UITextField!
@@ -19,8 +19,13 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imagePicker.delegate = self
-
+        self.imagePicker.sourceType = .photoLibrary
+        self.imagePicker.allowsEditing = true
+        self.imagePicker.delegate = self
+    }
+    
+    @objc func pickImage(){
+        self.present(self.imagePicker, animated: true)
     }
     
     func openLibrary(){
@@ -41,10 +46,9 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate {
         
         let library = UIAlertAction(title: "사진 앨범", style: .default) { (action) in self.openLibrary()
         }
-        
         let camera = UIAlertAction(title:"카메라",style: .default){ (action) in self.openCamera()}
-        
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
         alert.addAction(library)
         alert.addAction(camera)
         alert.addAction(cancel)
@@ -62,19 +66,20 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate {
         UserInformation.shared.id = setID.text
         UserInformation.shared.pwd = setPWD.text
         UserInformation.shared.pwdCheck = checkPWD.text
-        UserInformation.shared.information = setIntroduction.text    
+        UserInformation.shared.information = setIntroduction.text
+        UserInformation.shared.imageProfile = setProfile.image
     }
     
 }
 
-extension SignUpViewController:     UIImagePickerControllerDelegate, UINavigationBarDelegate{
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage{
-            setProfile.image = image
-            
-            print(info)
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage: UIImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            self.setProfile.image = editedImage
+        }else if let originalImage: UIImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.setProfile.image = originalImage
         }
-        dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 
 }
