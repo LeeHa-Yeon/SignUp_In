@@ -19,13 +19,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.imagePicker.sourceType = .photoLibrary
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
-    }
-    
-    @objc func pickImage(){
-        self.present(self.imagePicker, animated: true)
     }
     
     func openLibrary(){
