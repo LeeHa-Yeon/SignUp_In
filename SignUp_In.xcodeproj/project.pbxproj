@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F5D140726EF5B64005FE794 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D140626EF5B64005FE794 /* SignInViewController.swift */; };
+		9F5D140926EF5B6D005FE794 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D140826EF5B6D005FE794 /* SignUpViewController.swift */; };
+		9F5D140C26EF626C005FE794 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D140B26EF626C005FE794 /* UserInformation.swift */; };
+		9F5D140E26EFA427005FE794 /* SignUpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D140D26EFA427005FE794 /* SignUpSecondViewController.swift */; };
 		9F6B1AC326EE3EE000D8BA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B1AC226EE3EE000D8BA1E /* AppDelegate.swift */; };
 		9F6B1AC526EE3EE000D8BA1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B1AC426EE3EE000D8BA1E /* SceneDelegate.swift */; };
 		9F6B1AC726EE3EE000D8BA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6B1AC626EE3EE000D8BA1E /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F5D140626EF5B64005FE794 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9F5D140826EF5B6D005FE794 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9F5D140B26EF626C005FE794 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		9F5D140D26EFA427005FE794 /* SignUpSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSecondViewController.swift; sourceTree = "<group>"; };
 		9F6B1ABF26EE3EE000D8BA1E /* SignUp_In.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp_In.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F6B1AC226EE3EE000D8BA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F6B1AC426EE3EE000D8BA1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F5D140526EF5B43005FE794 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D140626EF5B64005FE794 /* SignInViewController.swift */,
+				9F5D140826EF5B6D005FE794 /* SignUpViewController.swift */,
+				9F5D140D26EFA427005FE794 /* SignUpSecondViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9F5D140A26EF6222005FE794 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D140B26EF626C005FE794 /* UserInformation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9F6B1AB626EE3EE000D8BA1E = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +82,8 @@
 		9F6B1AC126EE3EE000D8BA1E /* SignUp_In */ = {
 			isa = PBXGroup;
 			children = (
+				9F5D140A26EF6222005FE794 /* Model */,
+				9F5D140526EF5B43005FE794 /* Login */,
 				9F6B1AC226EE3EE000D8BA1E /* AppDelegate.swift */,
 				9F6B1AC426EE3EE000D8BA1E /* SceneDelegate.swift */,
 				9F6B1AC626EE3EE000D8BA1E /* ViewController.swift */,
@@ -137,9 +165,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5D140E26EFA427005FE794 /* SignUpSecondViewController.swift in Sources */,
+				9F5D140726EF5B64005FE794 /* SignInViewController.swift in Sources */,
+				9F5D140C26EF626C005FE794 /* UserInformation.swift in Sources */,
 				9F6B1AC726EE3EE000D8BA1E /* ViewController.swift in Sources */,
 				9F6B1AC326EE3EE000D8BA1E /* AppDelegate.swift in Sources */,
 				9F6B1AC526EE3EE000D8BA1E /* SceneDelegate.swift in Sources */,
+				9F5D140926EF5B6D005FE794 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
