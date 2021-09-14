@@ -17,6 +17,7 @@
 		9F6B1ACA26EE3EE000D8BA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B1AC826EE3EE000D8BA1E /* Main.storyboard */; };
 		9F6B1ACC26EE3EE100D8BA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B1ACB26EE3EE100D8BA1E /* Assets.xcassets */; };
 		9F6B1ACF26EE3EE100D8BA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6B1ACD26EE3EE100D8BA1E /* LaunchScreen.storyboard */; };
+		9FB6BFC926F0EE5F008C4F29 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB6BFC826F0EE5F008C4F29 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9F6B1ACB26EE3EE100D8BA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F6B1ACE26EE3EE100D8BA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F6B1AD026EE3EE100D8BA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FB6BFC826F0EE5F008C4F29 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5D140B26EF626C005FE794 /* UserInformation.swift */,
+				9FB6BFC826F0EE5F008C4F29 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				9F5D140726EF5B64005FE794 /* SignInViewController.swift in Sources */,
 				9F5D140C26EF626C005FE794 /* UserInformation.swift in Sources */,
 				9F6B1AC726EE3EE000D8BA1E /* ViewController.swift in Sources */,
+				9FB6BFC926F0EE5F008C4F29 /* User.swift in Sources */,
 				9F6B1AC326EE3EE000D8BA1E /* AppDelegate.swift in Sources */,
 				9F6B1AC526EE3EE000D8BA1E /* SceneDelegate.swift in Sources */,
 				9F5D140926EF5B6D005FE794 /* SignUpViewController.swift in Sources */,

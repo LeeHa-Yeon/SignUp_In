@@ -1,6 +1,6 @@
 import UIKit
 
-class SignUpSecondViewController: UIViewController {
+class SignUpSecondViewController: UIViewController,UIGestureRecognizerDelegate {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var setPhone: UITextField!
@@ -28,6 +28,15 @@ class SignUpSecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.datePicker.addTarget(self, action: #selector(self.didDatePickerValueChanged(_:)), for: UIControl.Event.valueChanged)
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
+        
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 
 }

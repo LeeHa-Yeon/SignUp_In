@@ -10,6 +10,10 @@ import UIKit
 class SignUpViewController: UIViewController {
 
 
+    
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
     @IBOutlet weak var setID: UITextField!
     @IBOutlet weak var setPWD: UITextField!
     @IBOutlet weak var checkPWD: UITextField!
@@ -19,6 +23,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.tapView(_:)))
+        self.view.addGestureRecognizer(tapRecognizer)
+        
         self.imagePicker.allowsEditing = true
         self.imagePicker.delegate = self
     }

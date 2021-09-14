@@ -89,7 +89,7 @@
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="자기소개 해주세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O8Q-pN-H8f">
                                 <rect key="frame" x="20" y="200" width="374" height="374"/>
-                                <color key="backgroundColor" red="0.64545625877006696" green="0.72886691161915562" blue="0.78370064496994019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.91078626578943922" green="0.94482058223042886" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O8Q-pN-H8f" secondAttribute="height" multiplier="1:1" id="ipc-kO-WBe"/>
                                 </constraints>
@@ -147,6 +147,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Fp-Mz-CA2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Xl3-mY-aNu" firstAttribute="top" secondItem="O8Q-pN-H8f" secondAttribute="bottom" constant="60" id="190-7d-CeN"/>
                             <constraint firstItem="gbQ-XN-bhc" firstAttribute="top" secondItem="8Fp-Mz-CA2" secondAttribute="top" constant="50" id="1pw-PS-Wea"/>
@@ -166,6 +167,9 @@
                             <constraint firstItem="gbQ-XN-bhc" firstAttribute="leading" secondItem="8Fp-Mz-CA2" secondAttribute="leading" constant="20" id="sQI-Hi-TZP"/>
                             <constraint firstItem="wuv-zQ-C5s" firstAttribute="leading" secondItem="gbQ-XN-bhc" secondAttribute="trailing" constant="20" id="yEC-bm-LUv"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aIo-KH-pZL" appends="YES" id="Zen-hv-zeL"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="2xh-Lm-aKc"/>
                     <connections>
@@ -177,6 +181,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJk-rN-Wpa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aIo-KH-pZL">
+                    <connections>
+                        <action selector="tapView:" destination="QED-h8-fUx" id="jlq-IE-89w"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="802.89855072463774" y="93.75"/>
         </scene>
@@ -197,7 +206,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gy2-T7-QRP">
                                 <rect key="frame" x="30" y="70.5" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 13, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-UA-Abr">
                                 <rect key="frame" x="231.5" y="124.5" width="152.5" height="20.5"/>
@@ -211,7 +220,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="N3H-YH-rbb">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="N3H-YH-rbb">
                                 <rect key="frame" x="0.0" y="175" width="414" height="216"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-aH-0rg">
@@ -237,6 +246,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ciw-6c-aoU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="dMp-TT-w5U" firstAttribute="top" secondItem="gy2-T7-QRP" secondAttribute="bottom" constant="20" id="2JM-vJ-u0a"/>
                             <constraint firstItem="DS4-UA-Abr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dMp-TT-w5U" secondAttribute="trailing" constant="8" symbolic="YES" id="457-Yt-hU4"/>
