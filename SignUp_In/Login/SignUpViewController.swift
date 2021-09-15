@@ -66,11 +66,11 @@ class SignUpViewController: UIViewController {
     
     // 회원 정보 데이터 저장
     @IBAction func sendInfo(_ sender: Any) {
-        UserInformation.shared.id = setID.text
-        UserInformation.shared.pwd = setPWD.text
-        UserInformation.shared.pwdCheck = checkPWD.text
-        UserInformation.shared.information = setIntroduction.text
-        UserInformation.shared.imageProfile = setProfile.image
+//        UserInformation.shared.id = setID.text
+//        UserInformation.shared.pwd = setPWD.text
+//        UserInformation.shared.pwdCheck = checkPWD.text
+//        UserInformation.shared.information = setIntroduction.text
+//        UserInformation.shared.imageProfile = setProfile.image
     }
     
 }
