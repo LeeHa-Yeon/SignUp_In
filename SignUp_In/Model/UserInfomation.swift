@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-class UserInformation{
-    static let shared: UserInformation = UserInformation()
+class UserInfomation{
+    static let shared: UserInfomation = UserInfomation()
     
     private init(){}
     

@@ -54,7 +54,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="moveToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfY-UN-tVS"/>
-                                                    <segue destination="QED-h8-fUx" kind="presentation" id="e3f-8d-hZc"/>
+                                                    <segue destination="QED-h8-fUx" kind="presentation" id="nZD-Ta-g4K"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -122,15 +122,14 @@
                                     <color key="titleColor" red="0.84108304980000004" green="0.35706442589999998" blue="0.37253654000000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpCancle:" destination="QED-h8-fUx" eventType="touchUpInside" id="FeJ-Yb-1Yy"/>
+                                    <action selector="cancleButton:" destination="QED-h8-fUx" eventType="touchUpInside" id="61F-x5-J6r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEN-jC-5QK">
                                 <rect key="frame" x="258" y="634" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="sendInfo:" destination="QED-h8-fUx" eventType="touchUpInside" id="JmR-sA-Mao"/>
-                                    <segue destination="gV2-75-GCk" kind="show" id="BX4-0Q-FAm"/>
+                                    <action selector="nextButton:" destination="QED-h8-fUx" eventType="touchUpInside" id="bhV-Jo-O8m"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wuv-zQ-C5s">
@@ -160,7 +159,7 @@
                                     <constraint firstAttribute="width" constant="130" id="nj4-dR-YUl"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="addProfile:" destination="QED-h8-fUx" eventType="touchUpInside" id="jcn-iC-Qnd"/>
+                                    <action selector="postProfile:" destination="QED-h8-fUx" eventType="touchUpInside" id="oil-ON-Bha"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,11 +191,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="2xh-Lm-aKc"/>
                     <connections>
-                        <outlet property="checkPWD" destination="ueY-hm-avG" id="5Ld-8L-ewH"/>
-                        <outlet property="setID" destination="lX4-aI-nxc" id="YoG-eA-tS8"/>
-                        <outlet property="setIntroduction" destination="O8Q-pN-H8f" id="vC4-bP-O84"/>
-                        <outlet property="setPWD" destination="8Ep-eg-2JV" id="jgs-Vo-a83"/>
-                        <outlet property="setProfile" destination="gbQ-XN-bhc" id="7bj-HQ-OFm"/>
+                        <outlet property="idTextField" destination="lX4-aI-nxc" id="bi1-Nf-ug1"/>
+                        <outlet property="introduceTextView" destination="O8Q-pN-H8f" id="tw8-Cd-OVV"/>
+                        <outlet property="profileImageView" destination="gbQ-XN-bhc" id="DE8-Qy-CZJ"/>
+                        <outlet property="pwdCheckTextField" destination="ueY-hm-avG" id="0Dr-4m-scB"/>
+                        <outlet property="pwdTextField" destination="8Ep-eg-2JV" id="Ef1-PC-5wt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJk-rN-Wpa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -213,37 +212,37 @@
             <objects>
                 <viewController id="gV2-75-GCk" customClass="SignUpSecondViewController" customModule="SignUp_In" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qwi-rf-w3B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12k-9L-XjD">
-                                <rect key="frame" x="30" y="30" width="59" height="20.5"/>
+                                <rect key="frame" x="30" y="74" width="59" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gy2-T7-QRP">
-                                <rect key="frame" x="30" y="70.5" width="354" height="34"/>
+                                <rect key="frame" x="30" y="114.5" width="354" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 13, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS4-UA-Abr">
-                                <rect key="frame" x="231.5" y="124.5" width="152.5" height="20.5"/>
+                                <rect key="frame" x="231.5" y="168.5" width="152.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMp-TT-w5U">
-                                <rect key="frame" x="30" y="124.5" width="59" height="20.5"/>
+                                <rect key="frame" x="30" y="168.5" width="59" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="N3H-YH-rbb">
-                                <rect key="frame" x="0.0" y="175" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="219" width="414" height="216"/>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="OTK-aH-0rg">
-                                <rect key="frame" x="50" y="471" width="314" height="30"/>
+                                <rect key="frame" x="50" y="515" width="314" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udN-ed-LXL">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="30"/>
@@ -252,9 +251,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-zw-Tl4">
                                         <rect key="frame" x="163" y="0.0" width="34" height="30"/>
                                         <state key="normal" title="Back"/>
-                                        <connections>
-                                            <action selector="BackButton:" destination="gV2-75-GCk" eventType="touchUpInside" id="1Nr-hO-5Jv"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-YE-sI0">
                                         <rect key="frame" x="277" y="0.0" width="37" height="30"/>
@@ -287,11 +283,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oYh-nJ-dAw"/>
-                    <connections>
-                        <outlet property="datePicker" destination="N3H-YH-rbb" id="5OC-hs-fff"/>
-                        <outlet property="setBirth" destination="DS4-UA-Abr" id="JdI-EP-jUY"/>
-                        <outlet property="setPhone" destination="gy2-T7-QRP" id="hBW-BG-Qgc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjD-OF-aeF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

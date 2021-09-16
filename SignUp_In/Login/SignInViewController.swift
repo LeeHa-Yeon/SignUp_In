@@ -31,7 +31,7 @@ class SignInViewController: UIViewController{
     @IBOutlet var bottomContainerMargin: NSLayoutConstraint!
     
     private var originalBottomMargin: CGFloat = 0
-    let userInfomation: UserInformation = UserInformation.shared
+    let userInfomation: UserInfomation = UserInfomation.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +88,13 @@ class SignInViewController: UIViewController{
 }
 
 extension SignInViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension SignUpSecondViewController: UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
